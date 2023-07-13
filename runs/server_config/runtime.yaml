@@ -1,0 +1,49 @@
+- status: 0 - openlane design prep
+  runtime_s: 2.23
+  runtime_ts: 0h0m2s230ms
+- status: 1 - synthesis - yosys
+  runtime_s: 210.94
+  runtime_ts: 0h3m30s935ms
+- status: 2 - sta - openroad
+  runtime_s: 0.75
+  runtime_ts: 0h0m0s746ms
+- status: 3 - floorplan initialization - openroad
+  runtime_s: 0.57
+  runtime_ts: 0h0m0s571ms
+- status: 4 - io_place - openlane
+  runtime_s: 0.43
+  runtime_ts: 0h0m0s428ms
+- status: 5 - global placement - openroad
+  runtime_s: 66.53
+  runtime_ts: 0h1m6s528ms
+- status: 6 - sta - openroad
+  runtime_s: 0.77
+  runtime_ts: 0h0m0s765ms
+- status: 7 - macro placement - basic_mp.tcl
+  runtime_s: 0.96
+  runtime_ts: 0h0m0s958ms
+- status: 8 - pdn generation - openroad
+  runtime_s: 1.14
+  runtime_ts: 0h0m1s140ms
+- status: 9 - random global placement - openlane
+  runtime_s: 0.82
+  runtime_ts: 0h0m0s825ms
+- status: 10 - detailed placement - openroad
+  runtime_s: 1.37
+  runtime_ts: 0h0m1s366ms
+- status: 11 - sta - openroad
+  runtime_s: 0.77
+  runtime_ts: 0h0m0s768ms
+- status: 12 - cts - openroad
+  runtime_s: 26.53
+  runtime_ts: 0h0m26s525ms
+- status: 13 - sta - openroad
+  runtime_s: 0.77
+  runtime_ts: 0h0m0s768ms
+---
+- status: routed
+  runtime_s: -1
+  runtime_ts: '-1'
+- status: flow failed
+  runtime_s: 1392.0
+  runtime_ts: 0h23m12s0ms

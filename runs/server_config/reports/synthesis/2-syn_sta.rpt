@@ -1,0 +1,177 @@
+
+===========================================================================
+report_checks -unconstrained
+
+======================= Typical Corner ===================================
+
+Startpoint: wb_rst_i (input port clocked by wb_clk_i)
+Endpoint: efabless_subsystem.config_regs_i.auto_restart_q_reg._13_
+          (recovery check against falling-edge clock wb_clk_i')
+Path Group: asynchronous
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock wb_clk_i (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          4.00    4.00 ^ input external delay
+                  0.22    0.15    4.15 ^ wb_rst_i (in)
+    10    0.05                           wb_rst_i (net)
+                  0.22    0.00    4.15 ^ efabless_subsystem.config_regs_i._2633_/A (sky130_fd_sc_hd__inv_2)
+                  1.51    1.29    5.45 v efabless_subsystem.config_regs_i._2633_/Y (sky130_fd_sc_hd__inv_2)
+   167    0.71                           efabless_subsystem.config_regs_i.auto_restart_q_reg.aclr (net)
+                  1.51    0.00    5.45 v efabless_subsystem.config_regs_i.auto_restart_q_reg._07_/A (sky130_fd_sc_hd__inv_2)
+                  0.22    0.32    5.77 ^ efabless_subsystem.config_regs_i.auto_restart_q_reg._07_/Y (sky130_fd_sc_hd__inv_2)
+     2    0.01                           efabless_subsystem.config_regs_i.auto_restart_q_reg._00_ (net)
+                  0.22    0.00    5.77 ^ efabless_subsystem.config_regs_i.auto_restart_q_reg._13_/RESET_B (sky130_fd_sc_hd__dfbbn_2)
+                                  5.77   data arrival time
+
+                  0.15   20.00   20.00   clock wb_clk_i' (fall edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.25   19.75   clock uncertainty
+                          0.00   19.75   clock reconvergence pessimism
+                                 19.75 v efabless_subsystem.config_regs_i.auto_restart_q_reg._13_/CLK_N (sky130_fd_sc_hd__dfbbn_2)
+                         -0.06   19.69   library recovery time
+                                 19.69   data required time
+-----------------------------------------------------------------------------
+                                 19.69   data required time
+                                 -5.77   data arrival time
+-----------------------------------------------------------------------------
+                                 13.92   slack (MET)
+
+
+Startpoint: efabless_subsystem.compute_controller_i.arr_red_cycles_q_reg[4]._13_
+            (falling edge-triggered flip-flop clocked by wb_clk_i')
+Endpoint: efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._13_
+          (falling edge-triggered flip-flop clocked by wb_clk_i')
+Path Group: wb_clk_i
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock wb_clk_i' (fall edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.15    0.00    0.00 v efabless_subsystem.compute_controller_i.arr_red_cycles_q_reg[4]._13_/CLK_N (sky130_fd_sc_hd__dfbbn_2)
+                  0.09    0.75    0.75 v efabless_subsystem.compute_controller_i.arr_red_cycles_q_reg[4]._13_/Q (sky130_fd_sc_hd__dfbbn_2)
+    11    0.04                           efabless_subsystem.compute_controller_i.arr_red_cycles_q[4] (net)
+                  0.09    0.00    0.75 v efabless_subsystem.compute_controller_i.sub_700_60._37_/A (sky130_fd_sc_hd__or4_2)
+                  0.09    0.68    1.43 v efabless_subsystem.compute_controller_i.sub_700_60._37_/X (sky130_fd_sc_hd__or4_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.sub_700_60._09_ (net)
+                  0.09    0.00    1.43 v efabless_subsystem.compute_controller_i.sub_700_60._38_/D (sky130_fd_sc_hd__or4_2)
+                  0.09    0.56    1.99 v efabless_subsystem.compute_controller_i.sub_700_60._38_/X (sky130_fd_sc_hd__or4_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.sub_700_60._10_ (net)
+                  0.09    0.00    1.99 v efabless_subsystem.compute_controller_i.sub_700_60._39_/A (sky130_fd_sc_hd__buf_1)
+                  0.16    0.22    2.22 v efabless_subsystem.compute_controller_i.sub_700_60._39_/X (sky130_fd_sc_hd__buf_1)
+    10    0.03                           efabless_subsystem.compute_controller_i.sub_700_60._11_ (net)
+                  0.16    0.00    2.22 v efabless_subsystem.compute_controller_i.sub_700_60._53_/C (sky130_fd_sc_hd__or4_2)
+                  0.10    0.67    2.89 v efabless_subsystem.compute_controller_i.sub_700_60._53_/X (sky130_fd_sc_hd__or4_2)
+     2    0.00                           efabless_subsystem.compute_controller_i.sub_700_60._19_ (net)
+                  0.10    0.00    2.89 v efabless_subsystem.compute_controller_i.sub_700_60._57_/A2 (sky130_fd_sc_hd__a21bo_2)
+                  0.04    0.24    3.13 v efabless_subsystem.compute_controller_i.sub_700_60._57_/X (sky130_fd_sc_hd__a21bo_2)
+     2    0.00                           efabless_subsystem.compute_controller_i.gte_700_40.B[14] (net)
+                  0.04    0.00    3.13 v efabless_subsystem.compute_controller_i.gte_700_40._075_/B (sky130_fd_sc_hd__and2b_2)
+                  0.04    0.19    3.33 v efabless_subsystem.compute_controller_i.gte_700_40._075_/X (sky130_fd_sc_hd__and2b_2)
+     2    0.00                           efabless_subsystem.compute_controller_i.gte_700_40._025_ (net)
+                  0.04    0.00    3.33 v efabless_subsystem.compute_controller_i.gte_700_40._078_/B1 (sky130_fd_sc_hd__a2111o_2)
+                  0.07    0.46    3.79 v efabless_subsystem.compute_controller_i.gte_700_40._078_/X (sky130_fd_sc_hd__a2111o_2)
+     2    0.00                           efabless_subsystem.compute_controller_i.gte_700_40._028_ (net)
+                  0.07    0.00    3.79 v efabless_subsystem.compute_controller_i.gte_700_40._079_/C1 (sky130_fd_sc_hd__a211o_2)
+                  0.05    0.29    4.08 v efabless_subsystem.compute_controller_i.gte_700_40._079_/X (sky130_fd_sc_hd__a211o_2)
+     2    0.00                           efabless_subsystem.compute_controller_i.gte_700_40._029_ (net)
+                  0.05    0.00    4.08 v efabless_subsystem.compute_controller_i.gte_700_40._080_/C1 (sky130_fd_sc_hd__a221o_2)
+                  0.05    0.30    4.38 v efabless_subsystem.compute_controller_i.gte_700_40._080_/X (sky130_fd_sc_hd__a221o_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.gte_700_40._030_ (net)
+                  0.05    0.00    4.38 v efabless_subsystem.compute_controller_i.gte_700_40._081_/B1 (sky130_fd_sc_hd__a31o_2)
+                  0.04    0.23    4.60 v efabless_subsystem.compute_controller_i.gte_700_40._081_/X (sky130_fd_sc_hd__a31o_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.gte_700_40._031_ (net)
+                  0.04    0.00    4.60 v efabless_subsystem.compute_controller_i.gte_700_40._100_/A1 (sky130_fd_sc_hd__a211oi_2)
+                  0.57    0.51    5.11 ^ efabless_subsystem.compute_controller_i.gte_700_40._100_/Y (sky130_fd_sc_hd__a211oi_2)
+     9    0.03                           efabless_subsystem.compute_controller_i.gte_700_40.Z (net)
+                  0.57    0.00    5.11 ^ efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_683_39.g2._1_/S (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.41    5.52 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_683_39.g2._1_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_683_39.g2._0_ (net)
+                  0.05    0.00    5.52 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_683_39.g2._2_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09    5.61 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_683_39.g2._2_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_678_21.g2.data1 (net)
+                  0.02    0.00    5.61 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_678_21.g2._1_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.26    5.86 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_678_21.g2._1_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_678_21.g2._0_ (net)
+                  0.05    0.00    5.86 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_678_21.g2._2_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09    5.95 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_678_21.g2._2_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_672_66.g2.data1 (net)
+                  0.02    0.00    5.95 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_672_66.g2._1_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.26    6.20 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_672_66.g2._1_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_672_66.g2._0_ (net)
+                  0.05    0.00    6.20 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_672_66.g2._2_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09    6.29 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_672_66.g2._2_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2.data1 (net)
+                  0.02    0.00    6.29 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._3_/A1 (sky130_fd_sc_hd__mux4_2)
+                  0.07    0.44    6.73 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._3_/X (sky130_fd_sc_hd__mux4_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._0_ (net)
+                  0.07    0.00    6.73 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._5_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.27    7.01 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._5_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._2_ (net)
+                  0.05    0.00    7.01 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._6_/A (sky130_fd_sc_hd__buf_1)
+                  0.05    0.12    7.12 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_659_15.g2._6_/X (sky130_fd_sc_hd__buf_1)
+     3    0.01                           efabless_subsystem.compute_controller_i.arr_fsm_state_q_reg[1].d (net)
+                  0.05    0.00    7.12 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_654_22.g2._1_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.26    7.39 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_654_22.g2._1_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_654_22.g2._0_ (net)
+                  0.05    0.00    7.39 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_654_22.g2._2_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.08    7.47 v efabless_subsystem.compute_controller_i.mux_arr_fsm_state_d_654_22.g2._2_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           efabless_subsystem.compute_controller_i.arr_fsm_state_d[1] (net)
+                  0.02    0.00    7.47 v efabless_subsystem.compute_controller_i._0631_/A_N (sky130_fd_sc_hd__and2b_2)
+                  0.03    0.19    7.66 ^ efabless_subsystem.compute_controller_i._0631_/X (sky130_fd_sc_hd__and2b_2)
+     1    0.00                           efabless_subsystem.compute_controller_i._0013_ (net)
+                  0.03    0.00    7.66 ^ efabless_subsystem.compute_controller_i._0632_/A (sky130_fd_sc_hd__buf_1)
+                  0.11    0.13    7.79 ^ efabless_subsystem.compute_controller_i._0632_/X (sky130_fd_sc_hd__buf_1)
+     3    0.01                           efabless_subsystem.compute_controller_i.o_red_params_pop (net)
+                  0.11    0.00    7.79 ^ efabless_subsystem.reduction_memory_i._117_/A2 (sky130_fd_sc_hd__o21a_2)
+                  0.17    0.24    8.03 ^ efabless_subsystem.reduction_memory_i._117_/X (sky130_fd_sc_hd__o21a_2)
+     9    0.03                           efabless_subsystem.reduction_memory_i.mux_read_ptr_d_148_22.ctl (net)
+                  0.17    0.00    8.03 ^ efabless_subsystem.reduction_memory_i.mux_read_ptr_d_148_22.g9._1_/S (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.36    8.39 v efabless_subsystem.reduction_memory_i.mux_read_ptr_d_148_22.g9._1_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.reduction_memory_i.mux_read_ptr_d_148_22.g9._0_ (net)
+                  0.05    0.00    8.39 v efabless_subsystem.reduction_memory_i.mux_read_ptr_d_148_22.g9._2_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09    8.48 v efabless_subsystem.reduction_memory_i.mux_read_ptr_d_148_22.g9._2_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           efabless_subsystem.reduction_memory_i.mux_read_ptr_d_135_9.g9.data0 (net)
+                  0.02    0.00    8.48 v efabless_subsystem.reduction_memory_i.mux_read_ptr_d_135_9.g9._1_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.05    0.25    8.73 v efabless_subsystem.reduction_memory_i.mux_read_ptr_d_135_9.g9._1_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.reduction_memory_i.mux_read_ptr_d_135_9.g9._0_ (net)
+                  0.05    0.00    8.73 v efabless_subsystem.reduction_memory_i.mux_read_ptr_d_135_9.g9._2_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.09    8.82 v efabless_subsystem.reduction_memory_i.mux_read_ptr_d_135_9.g9._2_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           efabless_subsystem.reduction_memory_i.mux_read_ptr_d_135_9.g9.z (net)
+                  0.02    0.00    8.82 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._09_/A1 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.25    9.07 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._09_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._04_ (net)
+                  0.04    0.00    9.07 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._10_/A0 (sky130_fd_sc_hd__mux2_2)
+                  0.04    0.26    9.33 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._10_/X (sky130_fd_sc_hd__mux2_2)
+     1    0.00                           efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._05_ (net)
+                  0.04    0.00    9.33 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._11_/A (sky130_fd_sc_hd__buf_1)
+                  0.02    0.08    9.42 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._11_/X (sky130_fd_sc_hd__buf_1)
+     1    0.00                           efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._03_ (net)
+                  0.02    0.00    9.42 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._13_/D (sky130_fd_sc_hd__dfbbn_2)
+                                  9.42   data arrival time
+
+                  0.15   20.00   20.00   clock wb_clk_i' (fall edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.25   19.75   clock uncertainty
+                          0.00   19.75   clock reconvergence pessimism
+                                 19.75 v efabless_subsystem.reduction_memory_i.read_ptr_q_reg[0]._13_/CLK_N (sky130_fd_sc_hd__dfbbn_2)
+                         -0.11   19.64   library setup time
+                                 19.64   data required time
+-----------------------------------------------------------------------------
+                                 19.64   data required time
+                                 -9.42   data arrival time
+-----------------------------------------------------------------------------
+                                 10.22   slack (MET)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+
+======================= Typical Corner ===================================
+
+No paths found.

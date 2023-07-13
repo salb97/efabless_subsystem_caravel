@@ -1,0 +1,14 @@
+
+===========================================================================
+ report_clock_skew
+============================================================================
+
+======================= Typical Corner ===================================
+
+Clock wb_clk_i
+Latency      CRPR       Skew
+efabless_subsystem.compute_controller_i.acc_cnt_q_reg[0]._13_/CLK_N v
+   4.26
+efabless_subsystem.compute_controller_i.acc_cnt_q_reg[0]._13_/CLK_N v
+   3.86      0.00       0.41
+

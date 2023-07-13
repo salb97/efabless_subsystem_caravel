@@ -1,0 +1,24 @@
+OpenROAD 6840b7481d49c83870f79646cf979e66f22f6833 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/efabless_segmentation_memories/runs/server_config/tmp/placement/9-global.odb'...
+define_corners Typical
+read_liberty -corner Typical /home/salbort/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Placement Analysis
+---------------------------------
+total displacement      46724.8 u
+average displacement        5.4 u
+max displacement          179.7 u
+original HPWL        21376406.5 u
+legalized HPWL       21395686.7 u
+delta HPWL                    0 %
+
+[INFO DPL-0020] Mirrored 4368 instances
+[INFO DPL-0021] HPWL before          21395686.7 u
+[INFO DPL-0022] HPWL after           21388561.1 u
+[INFO DPL-0023] HPWL delta               -0.0 %
+Setting global connections for newly added cells...
+Writing OpenROAD database to /openlane/designs/efabless_segmentation_memories/runs/server_config/results/placement/user_project_wrapper.odb...
+Writing netlist to /openlane/designs/efabless_segmentation_memories/runs/server_config/results/placement/user_project_wrapper.nl.v...
+Writing powered netlist to /openlane/designs/efabless_segmentation_memories/runs/server_config/results/placement/user_project_wrapper.pnl.v...
+Writing layout to /openlane/designs/efabless_segmentation_memories/runs/server_config/results/placement/user_project_wrapper.def...

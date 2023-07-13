@@ -1,0 +1,4 @@
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openlane/designs/efabless_segmentation_memories/runs/server_config/tmp/merged.nom.lef at line 930.
+[WARNING ORD-1011] LEF master sky130_sram_1kbytes_1rw1r_200x48_8 has no liberty cell.
+[WARNING ORD-1011] LEF master sky130_sram_0kbytes_1rw1r_24x32_8 has no liberty cell.

@@ -1,0 +1,3 @@
+Warning: /openlane/designs/efabless_segmentation_memories/runs/server_config/results/synthesis/user_project_wrapper.v line 42573, module sky130_sram_1kbytes_1rw1r_200x48_8 not found. Creating black box for \efabless_subsystem.input_memory_i.mem200 .
+Warning: /openlane/designs/efabless_segmentation_memories/runs/server_config/results/synthesis/user_project_wrapper.v line 48851, module sky130_sram_0kbytes_1rw1r_24x32_8 not found. Creating black box for \efabless_subsystem.reduction_memory_i.mem241 .
+[WARNING] Did not save OpenROAD database!

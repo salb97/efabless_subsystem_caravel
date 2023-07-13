@@ -1,0 +1,16 @@
+OpenROAD 6840b7481d49c83870f79646cf979e66f22f6833 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/efabless_segmentation_memories/runs/server_config/tmp/placement/7-macros_placed.odb'...
+define_corners Typical
+read_liberty -corner Typical /home/salbort/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[WARNING PDN-0189] Supply pin vccd1 of instance efabless_subsystem.input_memory_i.mem200 is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance efabless_subsystem.input_memory_i.mem200 is not connected to any net.
+[WARNING PDN-0189] Supply pin vccd1 of instance efabless_subsystem.reduction_memory_i.mem241 is not connected to any net.
+[WARNING PDN-0189] Supply pin vssd1 of instance efabless_subsystem.reduction_memory_i.mem241 is not connected to any net.
+[INFO PDN-0001] Inserting grid: stdcell_grid
+[INFO PDN-0001] Inserting grid: macro - efabless_subsystem.reduction_memory_i.mem241
+[INFO PDN-0001] Inserting grid: macro - efabless_subsystem.input_memory_i.mem200
+Setting global connections for newly added cells...
+Writing OpenROAD database to /openlane/designs/efabless_segmentation_memories/runs/server_config/results/floorplan/user_project_wrapper.odb...
+Writing layout to /openlane/designs/efabless_segmentation_memories/runs/server_config/results/floorplan/user_project_wrapper.def...

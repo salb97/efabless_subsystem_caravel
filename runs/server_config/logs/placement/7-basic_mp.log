@@ -1,0 +1,46 @@
+OpenROAD 6840b7481d49c83870f79646cf979e66f22f6833 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/efabless_segmentation_memories/runs/server_config/tmp/placement/5-global.odb'...
+define_corners Typical
+read_liberty -corner Typical /home/salbort/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO MPL-0005] Found 2 macros.
+[WARNING MPL-0002] Some instances do not have Liberty models. TritonMP will place macros without connection information.
+[INFO MPL-0069] Initial weighted wire length 32728.1.
+Begin one level partition.
+[INFO MPL-0076] Partition 2 macros.
+[INFO MPL-0077] Using 2 cut lines.
+[INFO MPL-0079] Cut line 527.16.
+[INFO MPL-0079] Cut line 2051.14.
+End one level partition.
+Begin horizontal partition.
+Begin east partition.
+[INFO MPL-0076] Partition 0 macros.
+[INFO MPL-0077] Using 0 cut lines.
+End east partition.
+Begin west partition.
+[INFO MPL-0076] Partition 2 macros.
+[INFO MPL-0077] Using 2 cut lines.
+[INFO MPL-0079] Cut line 89.76.
+[INFO MPL-0079] Cut line 1912.16.
+End west partition.
+End horizontal partition.
+Begin horizontal partition.
+Begin east partition.
+[INFO MPL-0076] Partition 1 macros.
+[INFO MPL-0077] Using 1 cut lines.
+[INFO MPL-0079] Cut line 1912.16.
+End east partition.
+Begin west partition.
+[INFO MPL-0076] Partition 1 macros.
+[INFO MPL-0077] Using 1 cut lines.
+[INFO MPL-0079] Cut line 89.76.
+End west partition.
+End horizontal partition.
+[INFO MPL-0070] Using 3 partition sets.
+[INFO MPL-0071] Solution 1 weighted wire length 32677.2.
+[INFO MPL-0071] Solution 2 weighted wire length 36083.7.
+[INFO MPL-0071] Solution 3 weighted wire length 34776.9.
+[INFO MPL-0073] Best weighted wire length 36083.7.
+Writing OpenROAD database to /openlane/designs/efabless_segmentation_memories/runs/server_config/tmp/placement/7-macros_placed.odb...
+Writing layout to /openlane/designs/efabless_segmentation_memories/runs/server_config/tmp/placement/7-macros_placed.def...
